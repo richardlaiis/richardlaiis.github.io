@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 一個神秘的網站</title>
+    <link>https://example.org/posts/</link>
+    <description>Recent content in Posts on 一個神秘的網站</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sat, 25 Jan 2025 09:43:53 +0800</lastBuildDate>
+    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Helloworld</title>
+      <link>https://example.org/posts/helloworld/</link>
+      <pubDate>Sat, 25 Jan 2025 09:43:53 +0800</pubDate>
+      <guid>https://example.org/posts/helloworld/</guid>
+      <description>&lt;p&gt;Hello world!&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/e0WdQ5p.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
