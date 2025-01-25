@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>一個神秘的網站</title>
+    <title>Home on 一個神秘的網站</title>
     <link>https://example.org/</link>
-    <description>Recent content on 一個神秘的網站</description>
+    <description>Recent content in Home on 一個神秘的網站</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
     <lastBuildDate>Sat, 25 Jan 2025 09:43:53 +0800</lastBuildDate>
@@ -13,7 +13,14 @@
       <link>https://example.org/posts/helloworld/</link>
       <pubDate>Sat, 25 Jan 2025 09:43:53 +0800</pubDate>
       <guid>https://example.org/posts/helloworld/</guid>
-      <description>&lt;p&gt;Hello world!&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/e0WdQ5p.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Hello world!&lt;/p&gt;&#xA;&lt;p&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;figure class=&#34;&#34;&gt;&#xD;&#xA;&#xD;&#xA;    &lt;div&gt;&#xD;&#xA;        &lt;img loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;https://i.imgur.com/e0WdQ5p.png&#34; &gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;&#xD;&#xA;    &#xD;&#xA;&lt;/figure&gt;&#xD;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Log-Structured Merge Tree</title>
+      <link>https://example.org/posts/goodbyeworld/</link>
+      <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.org/posts/goodbyeworld/</guid>
+      <description>An LSM Tree overview and Java implementation.</description>
     </item>
   </channel>
 </rss>

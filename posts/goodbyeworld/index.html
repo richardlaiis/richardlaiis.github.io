@@ -14,27 +14,31 @@
 <link rel="icon" type="image/png" sizes="192x192" href="https://example.org//android-chrome-192x192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://example.org//apple-touch-icon.png">
 
-<meta name="description" content=""/>
+<meta name="description" content="An LSM Tree overview and Java implementation."/>
 
+
+<meta name="fediverse:creator" content="@username@instance.url">
 
 
 <title>
     
-    Helloworld | 一個神秘的網站
+    Log-Structured Merge Tree | 一個神秘的網站
     
 </title>
 
-<link rel="canonical" href="https://example.org/posts/helloworld/"/>
+<link rel="canonical" href="https://example.org/posts/goodbyeworld/"/>
 
-<meta property="og:url" content="https://example.org/posts/helloworld/">
+<meta property="og:url" content="https://example.org/posts/goodbyeworld/">
   <meta property="og:site_name" content="一個神秘的網站">
-  <meta property="og:title" content="Helloworld">
-  <meta property="og:description" content="Hello world!">
+  <meta property="og:title" content="Log-Structured Merge Tree">
+  <meta property="og:description" content="An LSM Tree overview and Java implementation.">
   <meta property="og:locale" content="zh_TW">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-01-25T09:43:53+08:00">
-    <meta property="article:modified_time" content="2025-01-25T09:43:53+08:00">
+    <meta property="article:published_time" content="2023-11-12T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-11-12T00:00:00+00:00">
+    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="Java">
 
 
 
@@ -130,18 +134,20 @@
     <a href="/posts/">Posts</a>
     <span class="breadcrumbs-separator"> > </span>
     
-    <a class="breadcrumbs-current" href="/posts/helloworld/">Helloworld</a>
+    <a class="breadcrumbs-current" href="/posts/goodbyeworld/">Log-Structured Merge Tree</a>
 </div>
 
 
 
-<div >
+<div  class="autonumber" >
 
   <div class="single-intro-container">
 
     
 
-    <h1 class="single-title">Helloworld</h1>
+    <h1 class="single-title">Log-Structured Merge Tree</h1>
+    
+    <p class="single-summary">An LSM Tree overview and Java implementation.</p>
     
 
     
@@ -150,9 +156,12 @@
       
       
       
-      <time datetime="2025-01-25T09:43:53&#43;08:00">January 25, 2025</time>
+      <time datetime="2023-11-12T00:00:00&#43;00:00">November 12, 2023</time>
       
 
+      
+      &nbsp; · &nbsp;
+      0 min read
       
     </p>
 
@@ -163,33 +172,16 @@
   
 
   
+  <aside class="toc">
+    <p><strong>Table of contents</strong></p>
+    <nav id="TableOfContents"></nav>
+  </aside>
+  
 
   
 
   <div class="single-content">
-    <p>Hello world!</p>
-<p>
-
-
-
-
-
-
-
-
-
-
-
-<figure class="">
-
-    <div>
-        <img loading="lazy" alt="" src="https://i.imgur.com/e0WdQ5p.png" >
-    </div>
-
     
-</figure>
-</p>
-
     
   </div>
 
@@ -208,18 +200,18 @@
 
         <div class="single-pagination-prev">
             
-            <div class="single-pagination-container-prev">
-                <div class="single-pagination-text">←</div>
-                <div class="single-pagination-text">
-                    <a href="/posts/goodbyeworld/">
-                        Log-Structured Merge Tree
-                    </a>
-                </div>
-            </div>
-            
         </div>
 
         <div class="single-pagination-next">
+            
+            <div class="single-pagination-container-next">
+                <div class="single-pagination-text">
+                    <a href="/posts/helloworld/">
+                        Helloworld
+                    </a>
+                </div>
+                <div class="single-pagination-text">→</div>
+            </div>
             
         </div>
 
@@ -264,6 +256,26 @@
 
   </footer>
 
+  
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
   
 
 </body>
