@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Jan 2026 16:42:54 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Myfirstpost</title>
+      <link>http://localhost:1313/posts/myfirstpost/</link>
+      <pubDate>Fri, 30 Jan 2026 16:42:54 +0800</pubDate>
+      <guid>http://localhost:1313/posts/myfirstpost/</guid>
+      <description>&lt;h2 id=&#34;hahahahahahaha&#34;&gt;hahahahahahaha&lt;/h2&gt;
+&lt;p&gt;ehehehehehe&lt;/p&gt;
+&lt;h3 id=&#34;破房&#34;&gt;破房&lt;/h3&gt;
+&lt;p&gt;我是一個 GPA 3.4 的可悲台大資工大二生，阿哈哈哈哈哈哈。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;教授這裡風好大&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+  </channel>
+</rss>
