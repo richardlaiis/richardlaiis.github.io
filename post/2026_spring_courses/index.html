@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="總共 25+1 學分 (1 是服學)，我已經死掉了。有些必修的評分方式或是教學範圍我就不提了，因為網路上應該已經有很多資訊。\n數值方法 範圍 請直接參見課程網頁： https://www.csie.ntu.edu.tw/~cjlin/courses/nm2026/\n心得 林智仁教授的上課方式是上課放已經錄好的影片，偶爾暫停下來講幾句，老實說我非常不喜歡這種模式，因為我覺得很容易睡著 XD。這堂課的內容大概就是講電腦如何更有效率的處理線性系統、浮點數系統，個人認為最困難的 part 大概就是 Conjugate Gradient method 跟 Fast fourier transform，但老實說沒有完全懂還是能考試，這就要講到這堂課的考試方式了。\n考試可以 Open Book，基本上什麼都可以帶，所以我基本上把課程的所有簡報和五年的考古題都印下來，個人認為非常好用w，需要額外具備的知識大概就是線性代數與微積分。作業部份會需要寫一點 C/Matlab 的程式，也蠻簡單的。\n整體來說我覺得這堂課是門好課，可以學到非常多東西，簡報編排的相當完整，甚至不上課也能看懂上課在幹嘛。\n智慧型汽車導論 範圍 Timing analysis, system design, intersection management, verification 還有很多 high-level 的東西。\n心得 有兩份作業，一個期中，一份 Final project。\n上完這門課我最大的感想就是 autonomous driving 真是太難實現了，需要顧慮的事情超爆多。\n這門課的含括了許多 high level 的觀念，雖然只是很粗淺的講過，但也有一些很實用的觀念 可以應用在自駕車以外的領域，例如 v-model, MILP, verification。當然也有一些比較需要計算的像是 timing analysis, graph based-model intersection management。總之是門好課可以修！\n數位系統與實驗 兩份各佔 5 % 的作業，剩下全看考試。\n範圍 Combinational logic, sequential logic, state machine design 等等。\n">
+<title>臺大資工大二下修課紀錄</title>
+
+
+<link rel="canonical" href="https://example.org/post/2026_spring_courses/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.e62e09c60ba428a627e03568fa3df938f6a8224f815b5846f00816c17d4a0be4.css"><meta property='og:title' content="臺大資工大二下修課紀錄">
+<meta property='og:description' content="總共 25+1 學分 (1 是服學)，我已經死掉了。有些必修的評分方式或是教學範圍我就不提了，因為網路上應該已經有很多資訊。\n數值方法 範圍 請直接參見課程網頁： https://www.csie.ntu.edu.tw/~cjlin/courses/nm2026/\n心得 林智仁教授的上課方式是上課放已經錄好的影片，偶爾暫停下來講幾句，老實說我非常不喜歡這種模式，因為我覺得很容易睡著 XD。這堂課的內容大概就是講電腦如何更有效率的處理線性系統、浮點數系統，個人認為最困難的 part 大概就是 Conjugate Gradient method 跟 Fast fourier transform，但老實說沒有完全懂還是能考試，這就要講到這堂課的考試方式了。\n考試可以 Open Book，基本上什麼都可以帶，所以我基本上把課程的所有簡報和五年的考古題都印下來，個人認為非常好用w，需要額外具備的知識大概就是線性代數與微積分。作業部份會需要寫一點 C/Matlab 的程式，也蠻簡單的。\n整體來說我覺得這堂課是門好課，可以學到非常多東西，簡報編排的相當完整，甚至不上課也能看懂上課在幹嘛。\n智慧型汽車導論 範圍 Timing analysis, system design, intersection management, verification 還有很多 high-level 的東西。\n心得 有兩份作業，一個期中，一份 Final project。\n上完這門課我最大的感想就是 autonomous driving 真是太難實現了，需要顧慮的事情超爆多。\n這門課的含括了許多 high level 的觀念，雖然只是很粗淺的講過，但也有一些很實用的觀念 可以應用在自駕車以外的領域，例如 v-model, MILP, verification。當然也有一些比較需要計算的像是 timing analysis, graph based-model intersection management。總之是門好課可以修！\n數位系統與實驗 兩份各佔 5 % 的作業，剩下全看考試。\n範圍 Combinational logic, sequential logic, state machine design 等等。\n">
+<meta property='og:url' content='https://example.org/post/2026_spring_courses/'>
+<meta property='og:site_name' content='richardlaiis what'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-06-13T20:39:56&#43;08:00'/><meta property='article:modified_time' content='2026-06-13T20:39:56&#43;08:00'/>
+<meta name="twitter:title" content="臺大資工大二下修課紀錄">
+<meta name="twitter:description" content="總共 25+1 學分 (1 是服學)，我已經死掉了。有些必修的評分方式或是教學範圍我就不提了，因為網路上應該已經有很多資訊。\n數值方法 範圍 請直接參見課程網頁： https://www.csie.ntu.edu.tw/~cjlin/courses/nm2026/\n心得 林智仁教授的上課方式是上課放已經錄好的影片，偶爾暫停下來講幾句，老實說我非常不喜歡這種模式，因為我覺得很容易睡著 XD。這堂課的內容大概就是講電腦如何更有效率的處理線性系統、浮點數系統，個人認為最困難的 part 大概就是 Conjugate Gradient method 跟 Fast fourier transform，但老實說沒有完全懂還是能考試，這就要講到這堂課的考試方式了。\n考試可以 Open Book，基本上什麼都可以帶，所以我基本上把課程的所有簡報和五年的考古題都印下來，個人認為非常好用w，需要額外具備的知識大概就是線性代數與微積分。作業部份會需要寫一點 C/Matlab 的程式，也蠻簡單的。\n整體來說我覺得這堂課是門好課，可以學到非常多東西，簡報編排的相當完整，甚至不上課也能看懂上課在幹嘛。\n智慧型汽車導論 範圍 Timing analysis, system design, intersection management, verification 還有很多 high-level 的東西。\n心得 有兩份作業，一個期中，一份 Final project。\n上完這門課我最大的感想就是 autonomous driving 真是太難實現了，需要顧慮的事情超爆多。\n這門課的含括了許多 high level 的觀念，雖然只是很粗淺的講過，但也有一些很實用的觀念 可以應用在自駕車以外的領域，例如 v-model, MILP, verification。當然也有一些比較需要計算的像是 timing analysis, graph based-model intersection management。總之是門好課可以修！\n數位系統與實驗 兩份各佔 5 % 的作業，剩下全看考試。\n範圍 Combinational logic, sequential logic, state machine design 等等。\n">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/teto1.png" 
+                        width=""
+                        height=""
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">richardlaiis what</a></h1>
+            <h2 class="site-description">If you lock in you can do anything.</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/richardlaiis'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li><a href="#數值方法">數值方法</a>
+      <ul>
+        <li><a href="#範圍">範圍</a></li>
+        <li><a href="#心得">心得</a></li>
+      </ul>
+    </li>
+    <li><a href="#智慧型汽車導論">智慧型汽車導論</a>
+      <ul>
+        <li><a href="#範圍-1">範圍</a></li>
+        <li><a href="#心得-1">心得</a></li>
+      </ul>
+    </li>
+    <li><a href="#數位系統與實驗">數位系統與實驗</a>
+      <ul>
+        <li><a href="#範圍-2">範圍</a></li>
+        <li><a href="#心得-2">心得</a></li>
+      </ul>
+    </li>
+    <li><a href="#作業系統">作業系統</a></li>
+    <li><a href="#web-app-程式設計與應用">Web APP 程式設計與應用</a>
+      <ul>
+        <li><a href="#範圍-3">範圍</a></li>
+        <li><a href="#心得-3">心得</a></li>
+      </ul>
+    </li>
+    <li><a href="#代數導論二">代數導論二</a>
+      <ul>
+        <li><a href="#範圍-4">範圍</a></li>
+        <li><a href="#心得-4">心得</a></li>
+      </ul>
+    </li>
+    <li><a href="#重量訓練">重量訓練</a></li>
+    <li><a href="#機率">機率</a></li>
+    <li><a href="#課程以外我學到">課程以外我學到&hellip;</a></li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/%E4%BF%AE%E8%AA%B2%E7%B4%80%E9%8C%84/" style="background-color: hsl(178, 60%, 84%); color: hsl(178, 60%, 15%);">
+                修課紀錄
+            </a>
+        
+            
+            
+            
+            <a href="/categories/%E8%B3%87%E5%B7%A5/" style="background-color: hsl(300, 60%, 84%); color: hsl(300, 60%, 15%);">
+                資工
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/2026_spring_courses/">臺大資工大二下修課紀錄</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2026-06-13T20:39:56&#43;08:00'>Saturday, June 13, 2026</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        1 minute read
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>Table of contents</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li><a href="#數值方法">數值方法</a>
+      <ul>
+        <li><a href="#範圍">範圍</a></li>
+        <li><a href="#心得">心得</a></li>
+      </ul>
+    </li>
+    <li><a href="#智慧型汽車導論">智慧型汽車導論</a>
+      <ul>
+        <li><a href="#範圍-1">範圍</a></li>
+        <li><a href="#心得-1">心得</a></li>
+      </ul>
+    </li>
+    <li><a href="#數位系統與實驗">數位系統與實驗</a>
+      <ul>
+        <li><a href="#範圍-2">範圍</a></li>
+        <li><a href="#心得-2">心得</a></li>
+      </ul>
+    </li>
+    <li><a href="#作業系統">作業系統</a></li>
+    <li><a href="#web-app-程式設計與應用">Web APP 程式設計與應用</a>
+      <ul>
+        <li><a href="#範圍-3">範圍</a></li>
+        <li><a href="#心得-3">心得</a></li>
+      </ul>
+    </li>
+    <li><a href="#代數導論二">代數導論二</a>
+      <ul>
+        <li><a href="#範圍-4">範圍</a></li>
+        <li><a href="#心得-4">心得</a></li>
+      </ul>
+    </li>
+    <li><a href="#重量訓練">重量訓練</a></li>
+    <li><a href="#機率">機率</a></li>
+    <li><a href="#課程以外我學到">課程以外我學到&hellip;</a></li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <p>總共 25+1 學分 (1 是服學)，我已經死掉了。有些必修的評分方式或是教學範圍我就不提了，因為網路上應該已經有很多資訊。</p>
+<h2 id="數值方法">數值方法
+</h2><h3 id="範圍">範圍
+</h3><p>請直接參見課程網頁： <a class="link" href="https://www.csie.ntu.edu.tw/~cjlin/courses/nm2026/"  target="_blank" rel="noopener"
+    >https://www.csie.ntu.edu.tw/~cjlin/courses/nm2026/</a></p>
+<h3 id="心得">心得
+</h3><p>林智仁教授的上課方式是上課放已經錄好的影片，偶爾暫停下來講幾句，老實說我非常不喜歡這種模式，因為我覺得很容易睡著 XD。這堂課的內容大概就是講電腦如何更有效率的處理線性系統、浮點數系統，個人認為最困難的 part 大概就是 Conjugate Gradient method 跟 Fast fourier transform，但老實說沒有完全懂還是能考試，這就要講到這堂課的考試方式了。</p>
+<p>考試可以 Open Book，基本上什麼都可以帶，所以我基本上把課程的所有簡報和五年的考古題都印下來，個人認為非常好用w，需要額外具備的知識大概就是線性代數與微積分。作業部份會需要寫一點 C/Matlab 的程式，也蠻簡單的。</p>
+<p>整體來說我覺得這堂課是門好課，可以學到非常多東西，簡報編排的相當完整，甚至不上課也能看懂上課在幹嘛。</p>
+<h2 id="智慧型汽車導論">智慧型汽車導論
+</h2><h3 id="範圍-1">範圍
+</h3><p>Timing analysis, system design, intersection management, verification 還有很多 high-level 的東西。</p>
+<h3 id="心得-1">心得
+</h3><p>有兩份作業，一個期中，一份 Final project。</p>
+<p>上完這門課我最大的感想就是 autonomous driving 真是太難實現了，需要顧慮的事情超爆多。</p>
+<p>這門課的含括了許多 high level 的觀念，雖然只是很粗淺的講過，但也有一些很實用的觀念 可以應用在自駕車以外的領域，例如 v-model, MILP, verification。當然也有一些比較需要計算的像是 timing analysis, graph based-model intersection management。總之是門好課可以修！</p>
+<h2 id="數位系統與實驗">數位系統與實驗
+</h2><p>兩份各佔 5 % 的作業，剩下全看考試。</p>
+<h3 id="範圍-2">範圍
+</h3><p>Combinational logic, sequential logic, state machine design 等等。</p>
+<h3 id="心得-2">心得
+</h3><p>也是被擠壓到時間的一科，期考自己沒有細心吃了很多虧，只能說希望自己最後有 A。有人說這門課是計概 2.0，但我覺得可以吃老本的頂多到 Karnaugh Map 那個章節，後面 (state machine, hazards&hellip;etc) 基本上都是新學習的知識。</p>
+<h2 id="作業系統">作業系統
+</h2><p>沒什麼心得，這學期修的學分太多了，導致這一科的時間被擠壓到蠻多，我完成 machine problem 都有用 AI 輔助 QwQ  兩次期考的成績也慘不忍賭。</p>
+<p>老師教的很好，全是我的問題。😭</p>
+<h2 id="web-app-程式設計與應用">Web APP 程式設計與應用
+</h2><h3 id="範圍-3">範圍
+</h3><p>Django, <del>AI 工具的使用</del></p>
+<h3 id="心得-3">心得
+</h3><p>基本上就是 LLM 課，我相信每個修課的人都使用 copilot 或 claude code 的來完成專案 (問過蠻多組ㄉ)</p>
+<p>我們組做了兩個專案，一個是共享記帳系統，一個是仿 Discord 的社群軟體: <a class="link" href="https://github.com/richardlaiis/discoord-group11"  target="_blank" rel="noopener"
+    >Discoord</a>。其實我覺得現在的數位工具市場其實有些飽和了，就是你大多數做的東西不會比熱門的商用/開源軟體好用，只是在重複造輪子，我們這組就是一個很好的例子。不過很高興這學期分到的組員每個都不擺爛，不像上學期影像處理的組員 :(</p>
+<h2 id="代數導論二">代數導論二
+</h2><h3 id="範圍-4">範圍
+</h3><p>Field theory, Galois theory, Function field, solvability, basic of kummer theory 等等。</p>
+<h3 id="心得-4">心得
+</h3><p>其實我覺得自己並沒有像那些數學系的人一樣，對數學充滿熱情。我大多時候就是看看課本、講義，開始寫作業，發現自己都不會，最後跟 Gemini 開始激烈討論 ;-;</p>
+<p>我感覺自己只是一個理解者，稍微碰到一絲抽象的概念就再也沒有靈感寫出題目ㄌ。之後我應該就不會再修數學系的課了，專心在資工的本業比較划算 QQ</p>
+<p>那這堂課怎麼樣呢？我覺得佐籐信夫蠻會上課的，舉了非常多實例，讓本來很抽象的東西變得比較容易理解。不過這學期的作業題目變好少，內容也跟上課重疊不少 QQ 但有提供 Lecture notes 超讚。整體而言是門好課，對於想入門抽象代數與迦羅瓦理論的人非常適合，雖然是英文授課但老師口音很標準，唯一要小心的是助教課飆車飆很快，內容在期考也有機會考出來。</p>
+<h2 id="重量訓練">重量訓練
+</h2><p>梁澤敬老師是臺灣前 100 公尺紀錄保持人，超猛。</p>
+<p>這堂課沒什麼好說的，推爆。教練會從零開始教重量訓練的各種動作，不管核心、上肢、下肢都可以練到，而且也可以學到如何安排自己的訓練菜單 (肥大、爆發力之類的)。此外，作業跟考試也很水，大部分的分數都可以靠點名賺到，是一門學得到東西又很甜的課，超讚～</p>
+<p>這們課也讓我開始正視自己糟糕的身材&hellip;</p>
+<h2 id="機率">機率
+</h2><p>洪一平的授課方式不知道為什麼總是有些玄學的氣質 XD</p>
+<p>老師上課很慢，簡報很醜，所以我很後悔自己沒有全程閱讀 textbook 來跟上進度，但兩次期考對我來說有點太難了 QQQQQ，希望我能夠通過 NFT 加分作業彌補自己的愚蠢 &gt;&lt;</p>
+<h2 id="課程以外我學到">課程以外我學到&hellip;
+</h2><ol>
+<li>世界上沒有這麼多觀眾 (<del>但有很多檢核你能力的裁定者</del>)</li>
+<li>修太多學分沒有任何意義，學習的 quality 比較重要 (希望自己以後不會再面臨到一個禮拜 7 個考試、2 個報告的窘境)</li>
+<li>休息時好好休息，學習時絕對要保持專注</li>
+</ol>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+
+        <div class="disqus-container">
+    
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2026 richardlaiis what
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.3">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.1ff1e5fdc4e178ed422e50aa407526dc552f26342d729343fded19416194382c.js" defer></script>
+
+
+    </body>
+</html>
