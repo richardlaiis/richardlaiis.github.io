@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://github.com/richardlaiis/categories/</loc>
     <lastmod>2026-06-13T20:39:56+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/post/</loc>
+    <loc>https://github.com/richardlaiis/post/</loc>
     <lastmod>2026-06-13T20:39:56+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/</loc>
+    <loc>https://github.com/richardlaiis/</loc>
     <lastmod>2026-06-13T20:39:56+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/%E4%BF%AE%E8%AA%B2%E7%B4%80%E9%8C%84/</loc>
+    <loc>https://github.com/richardlaiis/categories/%E4%BF%AE%E8%AA%B2%E7%B4%80%E9%8C%84/</loc>
     <lastmod>2026-06-13T20:39:56+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/post/2026_spring_courses/</loc>
+    <loc>https://github.com/richardlaiis/post/2026_spring_courses/</loc>
     <lastmod>2026-06-13T20:39:56+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/%E8%B3%87%E5%B7%A5/</loc>
+    <loc>https://github.com/richardlaiis/categories/%E8%B3%87%E5%B7%A5/</loc>
     <lastmod>2026-06-13T20:39:56+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/page/about/</loc>
+    <loc>https://github.com/richardlaiis/page/about/</loc>
     <lastmod>2026-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/page/</loc>
+    <loc>https://github.com/richardlaiis/page/</loc>
     <lastmod>2026-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/page/archives/</loc>
+    <loc>https://github.com/richardlaiis/page/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/page/search/</loc>
+    <loc>https://github.com/richardlaiis/page/search/</loc>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://github.com/richardlaiis/tags/</loc>
   </url>
 </urlset>
