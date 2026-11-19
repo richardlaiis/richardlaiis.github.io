@@ -50,7 +50,7 @@ const posts = (await getCollection('blog')).sort(
 				margin-bottom: 0.5rem;
 				border-radius: 12px;
 			}
-			ul li a {
+			ul li > a {
 				display: block;
 			}
 			.title {
@@ -65,9 +65,11 @@ const posts = (await getCollection('blog')).sort(
 			.category {
 				text-transform: capitalize;
 			}
-			ul li a:hover h4,
-			ul li a:hover .date {
+			ul li > a:hover h4 {
 				color: rgb(var(--accent));
+			}
+			.category:hover {
+				text-decoration: underline;
 			}
 			ul a:hover img {
 				box-shadow: var(--box-shadow);
@@ -101,11 +103,13 @@ const posts = (await getCollection('blog')).sort(
 									<Image width={720} height={360} src={post.data.heroImage} alt="" />
 								)}
 								<h4 class="title">{post.data.title}</h4>
-								<p class="date">
-									<FormattedDate date={post.data.pubDate} />
-									<span class="category">· {post.data.category}</span>
-								</p>
 							</a>
+							<p class="date">
+								<FormattedDate date={post.data.pubDate} /> ·{' '}
+								<a class="category" href={`/category/${post.data.category}/`}>
+									{post.data.category}
+								</a>
+							</p>
 						</li>
 					))}
 				</ul>

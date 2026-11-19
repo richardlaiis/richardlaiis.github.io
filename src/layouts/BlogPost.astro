@@ -6,9 +6,14 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+type PostData = CollectionEntry<'blog'>['data'];
+// category and lang are optional here because the About page also uses this layout.
+type Props = Omit<PostData, 'category' | 'lang'> & {
+	category?: PostData['category'];
+	lang?: PostData['lang'];
+};
 
-const { title, description, pubDate, updatedDate, heroImage, category, lang } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, category, lang = 'en' } = Astro.props;
 ---
 
 <html lang={lang}>
@@ -77,7 +82,11 @@ const { title, description, pubDate, updatedDate, heroImage, category, lang } = 
 								</div>
 							)}
 						</div>
-						<div class="category">{category}</div>
+						{category && (
+							<div class="category">
+								<a href={`/category/${category}/`}>{category}</a>
+							</div>
+						)}
 						<h1>{title}</h1>
 						<hr />
 					</div>

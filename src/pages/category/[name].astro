@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { CATEGORIES, SITE_TITLE } from '../../consts';
+
+// Astro builds one page per category: /category/life/, /category/knowledge/, ...
+export function getStaticPaths() {
+	return CATEGORIES.map((name) => ({ params: { name } }));
+}
+
+const { name } = Astro.params;
+const label = name.charAt(0).toUpperCase() + name.slice(1);
+
+// Only the posts in this category, newest first.
+const posts = (await getCollection('blog', (post) => post.data.category === name)).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`${label} · ${SITE_TITLE}`} description={`Posts in the ${label} category.`} />
+		<style>
+			ul {
+				list-style-type: none;
+				padding: 0;
+			}
+			li {
+				margin-bottom: 1.5em;
+			}
+			.date {
+				margin: 0;
+				color: rgb(var(--gray));
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>{label}</h1>
+			{posts.length === 0 ? (
+				<p>No posts yet.</p>
+			) : (
+				<ul>
+					{posts.map((post) => (
+						<li>
+							<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+							<p class="date">
+								<FormattedDate date={post.data.pubDate} />
+							</p>
+						</li>
+					))}
+				</ul>
+			)}
+		</main>
+		<Footer />
+	</body>
+</html>

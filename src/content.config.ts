@@ -1,6 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
+import { CATEGORIES } from './consts';
 
 const blog = defineCollection({
 	// Load Markdown and MDX files in the `src/content/blog/` directory.
@@ -15,7 +16,7 @@ const blog = defineCollection({
 			updatedDate: z.coerce.date().optional(),
 			heroImage: z.optional(image()),
 			// Which kind of post this is. Must be one of these four words.
-			category: z.enum(['life', 'knowledge', 'reflection', 'reading']),
+			category: z.enum(CATEGORIES),
 			// Main language of the post. Leave it out for English posts.
 			lang: z.enum(['en', 'zh-TW']).default('en'),
 		}),
