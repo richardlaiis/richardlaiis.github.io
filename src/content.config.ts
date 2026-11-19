@@ -14,6 +14,10 @@ const blog = defineCollection({
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
 			heroImage: z.optional(image()),
+			// Which kind of post this is. Must be one of these four words.
+			category: z.enum(['life', 'knowledge', 'reflection', 'reading']),
+			// Main language of the post. Leave it out for English posts.
+			lang: z.enum(['en', 'zh-TW']).default('en'),
 		}),
 });
 
