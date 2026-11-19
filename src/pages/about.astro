@@ -77,6 +77,18 @@ const range = (start: string, end?: string) => (end ? `${start} – ${end}` : st
 				padding: 0;
 				list-style: none;
 			}
+			.download {
+				display: inline-block;
+				margin-top: 1em;
+				padding: 0.4em 1em;
+				border: 2px solid var(--accent);
+				border-radius: 8px;
+				text-decoration: none;
+			}
+			.download:hover {
+				background: var(--accent);
+				color: white;
+			}
 		</style>
 	</head>
 	<body>
@@ -94,6 +106,9 @@ const range = (start: string, end?: string) => (end ? `${start} – ${end}` : st
 						))}
 					</ul>
 				)}
+				<a class="download" href="/cv.pdf" target="_blank" rel="noopener">
+					View CV (PDF)
+				</a>
 			</div>
 
 			<section>

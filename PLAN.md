@@ -2,13 +2,13 @@
 
 ## Goal
 
-A personal site where I post life updates and interesting things (knowledge, reflections, reading notes), with a CV page that introduces me. The CV can also be downloaded as a PDF.
+A personal site where I post life updates and interesting things (knowledge, reflections, reading notes), with a CV page that introduces me. The CV is also available as a PDF.
 
 ## Priorities
 
 - Quick to get online
 - Easy to maintain: a new post = one new Markdown file, no server or database
-- The CV has one source of truth, so the web page and the PDF never drift apart
+- The CV web page has one source of truth (`cv.yaml`); the PDF is written by hand, so I keep the two in sync myself
 
 ## Tech
 
@@ -42,9 +42,9 @@ lang: zh-TW        # optional: only for posts written mainly in Chinese (default
 
 - CV content is in `src/data/cv.yaml` (name, summary, education, experience, skills, projects, contact links)
 - The `/about` page is generated from that file
-- The CV page has a **print stylesheet** (hides nav/footer, clean A4 layout), so the browser's Print → Save as PDF gives a polished PDF
-- The exported PDF is saved as `public/cv.pdf`, with a "Download PDF" button on the CV page
-- When I update the CV: edit the YAML, check the page, re-export the PDF, commit both
+- The PDF is a separate document I write myself, saved as `public/cv.pdf`
+- The CV page has a "View CV (PDF)" button that opens the PDF in a new tab
+- When I update the CV: edit the YAML, check the page, update my PDF to match, commit both
 
 ## Pages (MVP)
 
@@ -52,7 +52,7 @@ lang: zh-TW        # optional: only for posts written mainly in Chinese (default
 2. **Posts** (`/blog`): all posts, newest first, each showing its category label
 3. **Post page** (`/blog/[slug]`): title, date, category, content
 4. **Category pages** (`/category/[name]`): posts filtered by category
-5. **About / CV** (`/about`): generated from the CV data file, with a "Download PDF" button
+5. **About / CV** (`/about`): generated from the CV data file, with a "View CV (PDF)" button
 
 ## Build order (one step at a time: run it, check it, commit it)
 
@@ -61,7 +61,7 @@ lang: zh-TW        # optional: only for posts written mainly in Chinese (default
 3. Add `category` and optional `lang` to the content schema; show the category on posts; use `lang` for the page's `<html lang>`
 4. Add the category pages
 5. Build the CV page from `cv.yaml`
-6. Add the print stylesheet, export the PDF, add the download button
+6. Add a "View CV (PDF)" button and put my own PDF at `public/cv.pdf`
 7. Write 2–3 real posts (replace the sample posts)
 8. Push to GitHub, add the GitHub Pages deploy workflow, get a live URL
 9. Simple styling pass: fonts (including a Chinese font fallback), colors, spacing
@@ -74,4 +74,3 @@ lang: zh-TW        # optional: only for posts written mainly in Chinese (default
 - Analytics
 - Custom domain
 - Full bilingual site (Chinese menus, `/zh-tw/` URLs, Chinese CV)
-- Automatic PDF generation in the deploy workflow (instead of exporting by hand)
