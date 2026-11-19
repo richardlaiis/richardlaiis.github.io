@@ -16,51 +16,49 @@ type Props = Omit<PostData, 'category' | 'lang'> & {
 const { title, description, pubDate, updatedDate, heroImage, category, lang = 'en' } = Astro.props;
 ---
 
+<!doctype html>
 <html lang={lang}>
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
+			.post-header {
+				margin-bottom: 2.5rem;
 			}
 			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
 				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
+				width: 100%;
+				margin-bottom: 2rem;
+				box-shadow: var(--elevation-1);
 			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
+			.meta-row {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 0.5rem 0.75rem;
+				margin-bottom: 0.75rem;
 			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
+			h1 {
+				margin-bottom: 0.5rem;
 			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
+			.description {
+				margin: 0;
+				font-size: 1.1rem;
+				color: var(--on-surface-variant);
 			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
+			.updated {
 				font-style: italic;
 			}
-			.category {
-				margin-bottom: 0.5em;
-				color: rgb(var(--accent));
-				text-transform: capitalize;
+			/* Headings inside the post text */
+			.prose :global(h2) {
+				margin-top: 2.25rem;
+				font-size: 1.45rem;
+			}
+			.prose :global(h3) {
+				margin-top: 1.75rem;
+				font-size: 1.2rem;
+			}
+			.prose :global(li) {
+				margin-bottom: 0.35em;
 			}
 		</style>
 	</head>
@@ -69,27 +67,24 @@ const { title, description, pubDate, updatedDate, heroImage, category, lang = 'e
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
+				{heroImage && <Image class="hero-image" width={1020} height={510} src={heroImage} alt="" />}
+				<header class="post-header">
+					<div class="meta-row">
+						{category && <a class="chip" href={`/category/${category}/`}>{category}</a>}
+						<span class="meta">
 							<FormattedDate date={pubDate} />
 							{updatedDate && (
-								<div class="last-updated-on">
-									Last updated on <FormattedDate date={updatedDate} />
-								</div>
+								<span class="updated">
+									{' '}
+									· updated <FormattedDate date={updatedDate} />
+								</span>
 							)}
-						</div>
-						{category && (
-							<div class="category">
-								<a href={`/category/${category}/`}>{category}</a>
-							</div>
-						)}
-						<h1>{title}</h1>
-						<hr />
+						</span>
 					</div>
+					<h1>{title}</h1>
+					<p class="description">{description}</p>
+				</header>
+				<div class="prose">
 					<slot />
 				</div>
 			</article>

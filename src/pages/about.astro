@@ -19,94 +19,97 @@ const range = (start: string, end?: string) => (end ? `${start} – ${end}` : st
 	<head>
 		<BaseHead title={`About · ${SITE_TITLE}`} description={cv.summary} />
 		<style>
+			/* Intro block at the top: a soft card */
 			.cv-header {
-				margin-bottom: 2em;
+				margin-bottom: 2.5rem;
+				padding: 2rem;
 			}
 			.cv-header h1 {
-				margin-bottom: 0.2em;
+				margin-bottom: 0.15rem;
 			}
 			.headline {
 				margin: 0;
-				color: rgb(var(--gray));
+				color: var(--on-surface-variant);
 			}
 			.contact {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 0.5em 1.5em;
-				margin: 0.5em 0 0;
+				gap: 0.5rem;
+				margin: 1rem 0 0;
 				padding: 0;
 				list-style: none;
 			}
-			section {
-				margin-bottom: 2em;
+			.cv-header .button {
+				margin-top: 1.25rem;
 			}
+			section {
+				margin-bottom: 2.25rem;
+			}
+			/* Section titles in the accent color, small and calm */
 			h2 {
-				padding-bottom: 0.2em;
-				border-bottom: 1px solid rgb(var(--gray-light));
-				font-size: 1.5em;
+				margin-bottom: 1rem;
+				font-size: 0.85rem;
+				font-weight: 500;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: var(--primary);
 			}
 			.item {
-				margin-bottom: 1.2em;
+				margin-bottom: 1.25rem;
 			}
 			.item-top {
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: space-between;
-				gap: 0 1em;
+				align-items: baseline;
+				gap: 0 1rem;
 			}
 			.item h3 {
 				margin: 0;
-				font-size: 1.1em;
+				font-size: 1.05rem;
 			}
 			.when {
-				color: rgb(var(--gray));
+				font-size: 0.9rem;
+				color: var(--on-surface-variant);
 				white-space: nowrap;
 			}
 			.sub {
 				margin: 0;
-				color: rgb(var(--gray));
+				color: var(--on-surface-variant);
 			}
 			.item ul {
-				margin: 0.3em 0 0;
+				margin: 0.35rem 0 0;
+				padding-left: 1.25rem;
 			}
 			.item p {
-				margin: 0.2em 0 0;
+				margin: 0.2rem 0 0;
 			}
 			.skills {
 				margin: 0;
 				padding: 0;
 				list-style: none;
 			}
-			.download {
-				display: inline-block;
-				margin-top: 1em;
-				padding: 0.4em 1em;
-				border: 2px solid var(--accent);
-				border-radius: 8px;
-				text-decoration: none;
-			}
-			.download:hover {
-				background: var(--accent);
-				color: white;
+			.skills li {
+				margin-bottom: 0.35rem;
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<div class="cv-header">
+			<div class="card cv-header">
 				<h1>{cv.name}</h1>
 				{cv.headline && <p class="headline">{cv.headline}</p>}
 				{cv.contact.length > 0 && (
 					<ul class="contact">
 						{cv.contact.map((c) => (
 							<li>
-								<a href={c.url}>{c.label}</a>
+								<a class="chip" href={c.url}>{c.label}</a>
 							</li>
 						))}
 					</ul>
 				)}
-				<a class="download" href="/cv.pdf" target="_blank" rel="noopener">
+				<a class="button" href="/cv.pdf" target="_blank" rel="noopener">
 					View CV (PDF)
 				</a>
 			</div>

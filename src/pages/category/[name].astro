@@ -2,8 +2,8 @@
 import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
+import PostCard from '../../components/PostCard.astro';
 import { CATEGORIES, SITE_TITLE } from '../../consts';
 
 // Astro builds one page per category: /category/life/, /category/knowledge/, ...
@@ -25,37 +25,23 @@ const posts = (await getCollection('blog', (post) => post.data.category === name
 	<head>
 		<BaseHead title={`${label} · ${SITE_TITLE}`} description={`Posts in the ${label} category.`} />
 		<style>
-			ul {
-				list-style-type: none;
-				padding: 0;
+			.page-header {
+				margin-bottom: 2rem;
 			}
-			li {
-				margin-bottom: 1.5em;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
+			.back {
+				font-size: 0.9rem;
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>{label}</h1>
-			{posts.length === 0 ? (
-				<p>No posts yet.</p>
-			) : (
-				<ul>
-					{posts.map((post) => (
-						<li>
-							<a href={`/blog/${post.id}/`}>{post.data.title}</a>
-							<p class="date">
-								<FormattedDate date={post.data.pubDate} />
-							</p>
-						</li>
-					))}
-				</ul>
-			)}
+			<div class="page-header">
+				<a class="back" href="/blog/">← All posts</a>
+				<h1>{label}</h1>
+				<p class="meta">{posts.length} {posts.length === 1 ? 'post' : 'posts'}</p>
+			</div>
+			{posts.length === 0 ? <p>No posts yet.</p> : posts.map((post) => <PostCard post={post} />)}
 		</main>
 		<Footer />
 	</body>

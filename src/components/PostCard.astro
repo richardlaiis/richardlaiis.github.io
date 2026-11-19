@@ -1,0 +1,64 @@
+---
+// One post in a list: a card with the title, a one-line summary,
+// the date and the category. Used on /blog and on the category pages.
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+
+interface Props {
+	post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { title, description, pubDate, category, heroImage, lang } = post.data;
+---
+
+<article class="card post-card" lang={lang}>
+	{
+		heroImage && (
+			<a href={`/blog/${post.id}/`} tabindex="-1" aria-hidden="true">
+				<Image class="hero" width={720} height={360} src={heroImage} alt="" />
+			</a>
+		)
+	}
+	<h2 class="title">
+		<a href={`/blog/${post.id}/`}>{title}</a>
+	</h2>
+	<p class="description">{description}</p>
+	<div class="meta-row">
+		<span class="meta"><FormattedDate date={pubDate} /></span>
+		<a class="chip" href={`/category/${category}/`}>{category}</a>
+	</div>
+</article>
+
+<style>
+	.post-card {
+		margin-bottom: 1rem;
+	}
+	.hero {
+		display: block;
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+	.title {
+		margin: 0 0 0.35rem;
+		font-size: 1.25rem;
+	}
+	.title a {
+		color: var(--on-surface);
+	}
+	.title a:hover {
+		color: var(--primary);
+		text-decoration: none;
+	}
+	.description {
+		margin: 0 0 0.75rem;
+		color: var(--on-surface-variant);
+	}
+	.meta-row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.5rem 0.75rem;
+	}
+</style>

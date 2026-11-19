@@ -9,12 +9,25 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				padding-top: 5rem;
+			}
+			h1 {
+				font-size: 2.75rem;
+			}
+			.intro {
+				max-width: 36em;
+				font-size: 1.15rem;
+				color: var(--on-surface-variant);
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
 			<h1>Yu-Chi Lai</h1>
-			<p>{SITE_DESCRIPTION}</p>
+			<p class="intro">{SITE_DESCRIPTION}</p>
 		</main>
 		<Footer />
 	</body>
