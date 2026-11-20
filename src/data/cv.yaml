@@ -38,6 +38,9 @@ projects:
   - name: Knowmon
     url: https://github.com/richardlaiis/Knowmon
     description: Knowmon is a local-first note-taking app that keeps your notes as plain Markdown files on your own machine. Beyond manual links, it automatically connects notes by when they were written and edited, so you can see how your ideas grew over time and not just how they're linked. An optional local AI can search, summarize, and answer questions about your notes, and none of your data ever leaves your computer.
+  - name: Sendglass
+    url: https://richardlaiis.github.io/sendglass/
+    description: A short-term time capsule PWA. Capture a fleeting thought and send it forward to your future self, arriving as a gentle echo when the sand runs out.
 
 skills:
   - group: Languages
